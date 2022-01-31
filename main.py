@@ -78,8 +78,6 @@ def main():
         print("Wektor nie jest poprawny.")
     else:
         print("Wektor jest poprawny.")
-        # u1 = [0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1]
-        # u2 = [1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1]
         u1 = [0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1]
         u2 = [1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0]
         u = [u1, u2]
@@ -92,7 +90,7 @@ def main():
         print(f'{e=}')
         if e:
             # Poprawiamy ciąg u:
-            c = correct_u([u1, u2], e)
+            c = correct_u(u, e)
             print(f'+{(len(f"{c=}") - 1) * "_"}')
             print(f'{c=}')
         else:

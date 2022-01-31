@@ -55,8 +55,8 @@ def get_e(s1):
         s1_add_bi = [(x + y) % 2 for x, y in zip(s1, bi)]
         ei = 12 * [0]
         ei[i] = 1
+        i += 1
         if sum(s1_add_bi) <= 2:
-            i += 1
             print(f's1+b{i}={sum(s1_add_bi)}<=2\n')
             return [s1_add_bi, ei]
         print(f's1+b{i}={sum(s1_add_bi)}>2')
@@ -74,8 +74,8 @@ def get_e(s1):
         s2_add_bi = [(x + y) % 2 for x, y in zip(s2, bi)]
         ei = 12 * [0]
         ei[i] = 1
+        i += 1
         if sum(s2_add_bi) <= 2:
-            i += 1
             print(f's2+b{i}={sum(s2_add_bi)}<=2\n')
             return [ei, s2_add_bi]
         print(f's2+b{i}={sum(s2_add_bi)}>2')

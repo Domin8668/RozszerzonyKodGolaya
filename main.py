@@ -100,11 +100,11 @@ def main():
     print(f'  {s1=}\n')
     # Obliczamy korekcję e dla u:
     e = get_e(np.array(s1))
-    print(f'{u=}')
-    print(f'{e=}')
     if e:
         # Poprawiamy ciąg u:
         c = correct_u(u, e)
+        print(f'{u=}')
+        print(f'{e=}')
         print(f'+{(len(f"{c=}") - 1) * "_"}')
         print(f'{c=}')
     else:

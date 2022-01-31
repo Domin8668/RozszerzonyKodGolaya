@@ -48,18 +48,18 @@ def get_e(s1):
     # Kolumny macierzy b sa numerowane od 1 do 12.
     w1 = sum(s1)
     if w1 <= 3:
-        print(f'{w1=}<=3\n')
+        print(f'w(s1)=w({s1})={w1}<=3\n')
         return [s1, 12 * [0]]
-    print(f'{w1=}>3')
+    print(f'w(s1)=w({s1})={w1}>3')
     for i, bi in enumerate(b):
         s1_add_bi = [(x + y) % 2 for x, y in zip(s1, bi)]
         ei = 12 * [0]
         ei[i] = 1
         i += 1
         if sum(s1_add_bi) <= 2:
-            print(f's1+b{i}={sum(s1_add_bi)}<=2\n')
+            print(f'w(s1+b{i})=w({s1}+{b[i]})=w({s1_add_bi})={sum(s1_add_bi)}<=2\n')
             return [s1_add_bi, ei]
-        print(f's1+b{i}={sum(s1_add_bi)}>2')
+        print(f'w(s1+b{i})=w({s1}+{b[i]})=w({s1_add_bi})={sum(s1_add_bi)}>2')
     print("\n")
 
     s2 = np.matmul(b, s1.transpose())
@@ -67,18 +67,18 @@ def get_e(s1):
 
     w2 = sum(s2)
     if w2 <= 3:
-        print(f'{w2=}<=3\n')
+        print(f'w(s2)=w({s2})={w2}<=3\n')
         return [12 * [0], s2]
-    print(f'{w2=}>3')
+    print(f'w(s2)=w({s2})={w2}>3')
     for i, bi in enumerate(b):
         s2_add_bi = [(x + y) % 2 for x, y in zip(s2, bi)]
         ei = 12 * [0]
         ei[i] = 1
         i += 1
         if sum(s2_add_bi) <= 2:
-            print(f's2+b{i}={sum(s2_add_bi)}<=2\n')
+            print(f'w(s2+b{i})=w({s2}+{b[i]})=w({s2_add_bi})={sum(s2_add_bi)}<=2\n')
             return [ei, s2_add_bi]
-        print(f's2+b{i}={sum(s2_add_bi)}>2')
+        print(f'w(s2+b{i})=w({s2}+{b[i]})=w({s2_add_bi})={sum(s2_add_bi)}>2')
     print("\n")
     return None
 

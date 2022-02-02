@@ -55,11 +55,10 @@ def get_e(s1):
         s1_add_bi = [(x + y) % 2 for x, y in zip(s1, bi)]
         ei = 12 * [0]
         ei[i] = 1
-        i += 1
         if sum(s1_add_bi) <= 2:
-            print(f'w(s1+b{i})=w({s1}+{b[i]})=w({s1_add_bi})={sum(s1_add_bi)}<=2\n')
+            print(f'w(s1+b{i+1})=w({s1}+{b[i]})=w({s1_add_bi})={sum(s1_add_bi)}<=2\n')
             return [s1_add_bi, ei]
-        print(f'w(s1+b{i})=w({s1}+{b[i]})=w({s1_add_bi})={sum(s1_add_bi)}>2')
+        print(f'w(s1+b{i+1})=w({s1}+{b[i]})=w({s1_add_bi})={sum(s1_add_bi)}>2')
     print("\n")
 
     s2 = np.matmul(b, s1.transpose())
@@ -74,11 +73,10 @@ def get_e(s1):
         s2_add_bi = [(x + y) % 2 for x, y in zip(s2, bi)]
         ei = 12 * [0]
         ei[i] = 1
-        i += 1
         if sum(s2_add_bi) <= 2:
-            print(f'w(s2+b{i})=w({s2}+{b[i]})=w({s2_add_bi})={sum(s2_add_bi)}<=2\n')
+            print(f'w(s2+b{i+1})=w({s2}+{b[i]})=w({s2_add_bi})={sum(s2_add_bi)}<=2\n')
             return [ei, s2_add_bi]
-        print(f'w(s2+b{i})=w({s2}+{b[i]})=w({s2_add_bi})={sum(s2_add_bi)}>2')
+        print(f'w(s2+b{i+1})=w({s2}+{b[i]})=w({s2_add_bi})={sum(s2_add_bi)}>2')
     print("\n")
     return None
 
